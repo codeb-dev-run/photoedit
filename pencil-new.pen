@@ -1,0 +1,4827 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "kDVjH",
+      "x": 450,
+      "y": 1000,
+      "name": "PhotoEdit - Home (Korean)",
+      "clip": true,
+      "width": 402,
+      "height": 874,
+      "fill": "#0A0A0C",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "4ayVK",
+          "name": "statusBar",
+          "width": "fill_container",
+          "height": 62,
+          "fill": "#0B0B0E",
+          "padding": [
+            0,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "lSz6O",
+              "name": "homeTime",
+              "fill": "#FAFAF9",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "TOpKA",
+              "name": "homeStatusSpacer",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "RrZxJ",
+              "name": "homeStatusIcons",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mQZQU",
+                  "name": "homeSignal",
+                  "fill": "#FAFAF9",
+                  "content": "●●●●○",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "nF41X",
+                  "name": "homeWifi",
+                  "fill": "#FAFAF9",
+                  "content": "WiFi",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "P2nVQ",
+                  "name": "homeBattery",
+                  "fill": "#32D583",
+                  "content": "85%",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "PpoaJ",
+          "name": "hero",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            32,
+            24,
+            24,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "RpOeC",
+              "name": "t1",
+              "fill": "#FFFFFF",
+              "content": "PhotoEdit",
+              "fontFamily": "Fraunces",
+              "fontSize": 36,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "Y34au",
+              "name": "t2",
+              "fill": "#8A8A93",
+              "content": "레트로 감성의 사진 스튜디오",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qpQn3",
+          "name": "grid",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            0,
+            24,
+            24,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "0VO0E",
+              "name": "row1",
+              "width": "fill_container",
+              "height": 160,
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TK7rZ",
+                  "name": "cardGallery",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1C1C22",
+                  "cornerRadius": 24,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "UGuNR",
+                      "name": "galAIIcon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711539899.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "text",
+                      "id": "ekHIB",
+                      "name": "gText",
+                      "fill": "#FFFFFF",
+                      "content": "갤러리에서 선택",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Hz4Kj",
+                  "name": "cardCamera",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1C1C22",
+                  "cornerRadius": 24,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "511AO",
+                      "name": "camAIIcon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711545469.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "text",
+                      "id": "KCeHf",
+                      "name": "cText",
+                      "fill": "#FFFFFF",
+                      "content": "카메라로 촬영",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "0Uzkw",
+              "name": "row2",
+              "width": "fill_container",
+              "height": 160,
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "89hnJ",
+                  "name": "cardBatch",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1C1C22",
+                  "cornerRadius": 24,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "UVM3D",
+                      "name": "batchAIIcon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711550877.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "text",
+                      "id": "yJ6rB",
+                      "name": "bText",
+                      "fill": "#FFFFFF",
+                      "content": "일괄 처리",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PTxJQ",
+                  "name": "cardPreset",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1C1C22",
+                  "cornerRadius": 24,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "aPGoe",
+                      "name": "presetAIIcon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711555820.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "text",
+                      "id": "ERI0B",
+                      "name": "pText",
+                      "fill": "#FFFFFF",
+                      "content": "내 프리셋 관리",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "5XDOj",
+          "name": "featured",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            0,
+            24,
+            24,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "uqLmS",
+              "name": "title",
+              "fill": "#FFFFFF",
+              "content": "추천 프리셋",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "qKiOf",
+              "name": "presetScroll",
+              "width": "fill_container",
+              "height": 140,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "tr8hK",
+                  "name": "p1",
+                  "width": 100,
+                  "height": 140,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772711082743.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "padding": 12,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "1EHcO",
+                      "name": "t1",
+                      "fill": "#FFFFFF",
+                      "content": "Kodak\nSummer",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "e15eO",
+                  "name": "p2",
+                  "width": 100,
+                  "height": 140,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772711089612.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "padding": 12,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nzAF3",
+                      "name": "t2",
+                      "fill": "#FFFFFF",
+                      "content": "Fuji\nLandscape",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "CQK7A",
+                  "name": "p3",
+                  "width": 100,
+                  "height": 140,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772711096751.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "padding": 12,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "A6HeI",
+                      "name": "t3",
+                      "fill": "#FFFFFF",
+                      "content": "Lo-Fi\nVintage",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "QtlD2",
+      "x": 900,
+      "y": 1000,
+      "name": "PhotoEdit - Editor V2 (Korean)",
+      "clip": true,
+      "width": 402,
+      "height": 874,
+      "fill": "#0A0A0C",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "2r63T",
+          "name": "statusBar",
+          "width": "fill_container",
+          "height": 62,
+          "fill": "#0B0B0E",
+          "padding": [
+            0,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "sDvBb",
+              "name": "homeTime",
+              "fill": "#FAFAF9",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "lklap",
+              "name": "homeStatusSpacer",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "zPkXz",
+              "name": "homeStatusIcons",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Kxe7M",
+                  "name": "homeSignal",
+                  "fill": "#FAFAF9",
+                  "content": "●●●●○",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "u2Ck5",
+                  "name": "homeWifi",
+                  "fill": "#FAFAF9",
+                  "content": "WiFi",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "jKAv8",
+                  "name": "homeBattery",
+                  "fill": "#32D583",
+                  "content": "85%",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "53gmc",
+          "name": "header",
+          "width": "fill_container",
+          "height": 56,
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "zU5Zp",
+              "name": "backBtn",
+              "width": 40,
+              "height": 40,
+              "fill": "#1C1C22",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "7ANk9",
+                  "name": "b1",
+                  "fill": "#FFFFFF",
+                  "content": "←",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "xPiIa",
+              "name": "hTitle",
+              "fill": "#FFFFFF",
+              "content": "사진 편집",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "s139P",
+              "name": "saveBtn",
+              "width": 40,
+              "height": 40,
+              "fill": "#6366F1",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "92knP",
+                  "name": "s1",
+                  "fill": "#FFFFFF",
+                  "content": "✓",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HST8q",
+          "name": "imgWrapper",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "padding": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "A8fp8",
+              "name": "imgPreview",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1772711075372.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 24,
+              "layout": "vertical",
+              "gap": 16,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nOOxS",
+                  "name": "v1",
+                  "content": "🏔️",
+                  "fontFamily": "Inter",
+                  "fontSize": 80,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "TJfXx",
+                  "name": "v2",
+                  "fill": "#8A8A93",
+                  "content": "Kodak Portra 400",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "6vl66",
+              "name": "blurIconLayer",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "1TGDB",
+                  "x": 141,
+                  "y": 110,
+                  "name": "blurCircle1",
+                  "width": 120,
+                  "height": 120,
+                  "cornerRadius": 60
+                },
+                {
+                  "type": "frame",
+                  "id": "x6oCM",
+                  "x": 81,
+                  "y": 50,
+                  "name": "blurCircle2",
+                  "width": 240,
+                  "height": 240,
+                  "cornerRadius": 120
+                },
+                {
+                  "type": "frame",
+                  "id": "SFRwn",
+                  "x": 193,
+                  "y": 162,
+                  "name": "blurPoint",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "#6366F1",
+                  "cornerRadius": 8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "VbozG",
+          "name": "bottomPanel",
+          "width": "fill_container",
+          "fill": "#121217",
+          "cornerRadius": [
+            32,
+            32,
+            0,
+            0
+          ],
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            24,
+            20,
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "wJWgP",
+              "name": "tabs",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "#1C1C22",
+              "cornerRadius": 12,
+              "gap": 8,
+              "padding": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "3mh4t",
+                  "name": "tabBlur",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1C1C22",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SjQ48",
+                      "name": "t1",
+                      "fill": "#8A8A93",
+                      "content": "블러",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "opKTq",
+                  "name": "tabFilter",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#6366F1",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ye22r",
+                      "name": "t2",
+                      "fill": "#FFFFFF",
+                      "content": "필터",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "CAOyu",
+                  "name": "tabGrain",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1C1C22",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eHlxT",
+                      "name": "t3",
+                      "fill": "#8A8A93",
+                      "content": "그레인",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Iqdek",
+                  "name": "tabResize",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1C1C22",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IyLJ7",
+                      "name": "t4",
+                      "fill": "#8A8A93",
+                      "content": "크기",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wdxLj",
+              "name": "filterList",
+              "width": "fill_container",
+              "height": 90,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "IcHuM",
+                  "name": "f1",
+                  "width": 68,
+                  "height": 90,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "IOcFq",
+                      "name": "c1",
+                      "width": 68,
+                      "height": 68,
+                      "fill": "#6366F1",
+                      "cornerRadius": 16
+                    },
+                    {
+                      "type": "text",
+                      "id": "MxGSL",
+                      "name": "l1",
+                      "fill": "#FFFFFF",
+                      "content": "Portra 400",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "8Ftm7",
+                  "name": "f2",
+                  "width": 68,
+                  "height": 90,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ThHnk",
+                      "name": "c2",
+                      "width": 68,
+                      "height": 68,
+                      "fill": "#2A2A35",
+                      "cornerRadius": 16
+                    },
+                    {
+                      "type": "text",
+                      "id": "soypQ",
+                      "name": "l2",
+                      "fill": "#8A8A93",
+                      "content": "Ektar 100",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kjl83",
+                  "name": "f3",
+                  "width": 68,
+                  "height": 90,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "S47bF",
+                      "name": "c3",
+                      "width": 68,
+                      "height": 68,
+                      "fill": "#2A2A35",
+                      "cornerRadius": 16
+                    },
+                    {
+                      "type": "text",
+                      "id": "uf8zo",
+                      "name": "l3",
+                      "fill": "#8A8A93",
+                      "content": "Gold 200",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lmit6",
+              "name": "sliderSec",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "8Wzm4",
+                  "name": "sliderLabels",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yjpn2",
+                      "name": "sl1",
+                      "fill": "#FFFFFF",
+                      "content": "필터 강도",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qMG3y",
+                      "name": "sl2",
+                      "fill": "#6366F1",
+                      "content": "80%",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xtucP",
+                  "name": "track",
+                  "width": "fill_container",
+                  "height": 6,
+                  "fill": "#2A2A35",
+                  "cornerRadius": 3,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "RM7WO",
+                      "name": "bar",
+                      "width": 280,
+                      "height": "fill_container",
+                      "fill": "#6366F1",
+                      "cornerRadius": 3
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fPQcK",
+                  "name": "slider2Labels",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BRMi8",
+                      "name": "sl2_1",
+                      "fill": "#FFFFFF",
+                      "content": "블러 퍼짐 (반경)",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "0urRS",
+                      "name": "sl2_2",
+                      "fill": "#6366F1",
+                      "content": "60",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OoyH8",
+                  "name": "track2",
+                  "width": "fill_container",
+                  "height": 6,
+                  "fill": "#2A2A35",
+                  "cornerRadius": 3,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "5FZrx",
+                      "name": "bar2",
+                      "width": 160,
+                      "height": "fill_container",
+                      "fill": "#6366F1",
+                      "cornerRadius": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "5ydFF",
+              "name": "actions",
+              "width": "fill_container",
+              "height": 52,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "BHTNL",
+                  "name": "btnCancel",
+                  "width": 80,
+                  "height": "fill_container",
+                  "fill": "#1C1C22",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MVhX3",
+                      "name": "cText",
+                      "fill": "#FFFFFF",
+                      "content": "취소",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "z99Bj",
+                  "name": "btnPreset",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1C1C22",
+                  "cornerRadius": 16,
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fb910",
+                      "name": "pIcon",
+                      "content": "💾",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "iuxL0",
+                      "name": "pText",
+                      "fill": "#FFFFFF",
+                      "content": "프리셋 저장",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wj4Cz",
+                  "name": "btnSave",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#6366F1",
+                  "cornerRadius": 16,
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HvXtA",
+                      "name": "sText",
+                      "fill": "#FFFFFF",
+                      "content": "내보내기",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "4Px3R",
+          "name": "modalBg",
+          "width": 402,
+          "height": 874,
+          "fill": "#0A0A0CCC",
+          "layout": "vertical",
+          "padding": 24,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "vWLX3",
+              "name": "modalMenu",
+              "width": "fill_container",
+              "fill": "#1C1C22",
+              "cornerRadius": 24,
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vTBH0",
+                  "name": "mTitle",
+                  "fill": "#FFFFFF",
+                  "content": "내보내기 옵션",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "QHpEA",
+                  "name": "mBtn1",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "#6366F1",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fvypA",
+                      "name": "mt1",
+                      "fill": "#FFFFFF",
+                      "content": "갤러리에 저장",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ul7bz",
+                  "name": "mBtn2",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "#2A2A35",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yPPP8",
+                      "name": "mt2",
+                      "fill": "#FFFFFF",
+                      "content": "Instagram 공유",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "B6ThQ",
+                  "name": "mBtn3",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "#2A2A35",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NVLUH",
+                      "name": "mt3",
+                      "fill": "#FFFFFF",
+                      "content": "기타 앱으로 공유",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Jc3KT",
+          "name": "modalBg",
+          "width": 402,
+          "height": 874,
+          "fill": "#0A0A0CCC",
+          "layout": "vertical",
+          "padding": 24,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "MRaGy",
+              "name": "modalMenu",
+              "width": "fill_container",
+              "fill": "#1C1C22",
+              "cornerRadius": 24,
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "S9aKx",
+                  "name": "mTitle",
+                  "fill": "#FFFFFF",
+                  "content": "내보내기 옵션",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "8UzDJ",
+                  "name": "mBtn1",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "#6366F1",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DZTXU",
+                      "name": "mt1",
+                      "fill": "#FFFFFF",
+                      "content": "갤러리에 저장",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "C1LSa",
+                  "name": "mBtn2",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "#2A2A35",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "I5xCD",
+                      "name": "mt2",
+                      "fill": "#FFFFFF",
+                      "content": "Instagram 공유",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VDQ7z",
+                  "name": "mBtn3",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "#2A2A35",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "0CIhW",
+                      "name": "mt3",
+                      "fill": "#FFFFFF",
+                      "content": "기타 앱으로 공유",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OvBL9",
+          "name": "blurILayer",
+          "width": 402,
+          "height": 494,
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "GbAxp",
+              "name": "bc1",
+              "width": 120,
+              "height": 120,
+              "cornerRadius": 60
+            },
+            {
+              "type": "frame",
+              "id": "GJaz8",
+              "name": "bc2",
+              "width": 240,
+              "height": 240,
+              "cornerRadius": 120
+            },
+            {
+              "type": "frame",
+              "id": "BAOXb",
+              "name": "bp",
+              "width": 16,
+              "height": 16,
+              "fill": "#FFFFFF",
+              "cornerRadius": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "4kFSv",
+      "x": 0,
+      "y": 1000,
+      "name": "PhotoEdit - Splash (Korean)",
+      "clip": true,
+      "width": 402,
+      "height": 874,
+      "fill": "#0A0A0C",
+      "layout": "vertical",
+      "justifyContent": "space_between",
+      "children": [
+        {
+          "type": "frame",
+          "id": "4xUj7",
+          "name": "topSpace",
+          "width": "fill_container",
+          "height": 120
+        },
+        {
+          "type": "frame",
+          "id": "APqHZ",
+          "name": "centerContent",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "8qsg8",
+              "name": "logo",
+              "width": 120,
+              "height": 120,
+              "fill": "#6366F1",
+              "cornerRadius": 36,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "iKBsx",
+                  "name": "cameraIcon",
+                  "content": "📷",
+                  "fontFamily": "Inter",
+                  "fontSize": 64,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "iJxtl",
+              "name": "title",
+              "fill": "#FFFFFF",
+              "content": "PhotoEdit",
+              "fontFamily": "Fraunces",
+              "fontSize": 48,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "cW9yJ",
+              "name": "subtitle",
+              "fill": "#8A8A93",
+              "content": "당신의 사진에 빈티지 감성을",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "WICFS",
+          "name": "bottomContent",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            0,
+            24,
+            48,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "VyBNZ",
+              "name": "startBtn",
+              "width": "fill_container",
+              "height": 56,
+              "fill": "#FFFFFF",
+              "cornerRadius": 16,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "9jxz8",
+                  "name": "startText",
+                  "fill": "#0A0A0C",
+                  "content": "시작하기",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "6qBEn",
+      "x": 1350,
+      "y": 1000,
+      "name": "PhotoEdit - Batch (Korean)",
+      "clip": true,
+      "width": 402,
+      "height": 874,
+      "fill": "#0A0A0C",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "gsn4o",
+          "name": "sb",
+          "width": "fill_container",
+          "height": 62,
+          "fill": "#0B0B0E",
+          "padding": [
+            0,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "3YN1i",
+              "name": "homeTime",
+              "fill": "#FAFAF9",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "ISPGJ",
+              "name": "homeStatusSpacer",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "fc8rl",
+              "name": "homeStatusIcons",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "3vOBo",
+                  "name": "homeSignal",
+                  "fill": "#FAFAF9",
+                  "content": "●●●●○",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "2mM5e",
+                  "name": "homeWifi",
+                  "fill": "#FAFAF9",
+                  "content": "WiFi",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "SUJ5Z",
+                  "name": "homeBattery",
+                  "fill": "#32D583",
+                  "content": "85%",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "e33ps",
+          "name": "headerBatch",
+          "width": "fill_container",
+          "height": 56,
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "4qsg4",
+              "name": "backBtnB",
+              "width": 40,
+              "height": 40,
+              "fill": "#1C1C22",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SYJr9",
+                  "name": "b1B",
+                  "fill": "#FFFFFF",
+                  "content": "←",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "PhOQ9",
+              "name": "hTitleB",
+              "fill": "#FFFFFF",
+              "content": "일괄 처리",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "JN8vm",
+              "name": "emptyBtn",
+              "width": 40,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "9mynx",
+          "name": "contentBatch",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            24,
+            24,
+            120,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "I7PQR",
+              "name": "presetSection",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "o3pad",
+                  "name": "pTitle",
+                  "fill": "#FFFFFF",
+                  "content": "적용할 프리셋",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "q2miX",
+                  "name": "pDropdown",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "#1C1C22",
+                  "cornerRadius": 16,
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AvPCE",
+                      "name": "pdText",
+                      "fill": "#FFFFFF",
+                      "content": "Kodak Summer",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "5JaQ3",
+                      "name": "pdIcon",
+                      "fill": "#8A8A93",
+                      "content": "▼",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "egTY2",
+              "name": "batchImgSec",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "WIYSz",
+                  "name": "biHeader",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hdxHl",
+                      "name": "biTitle",
+                      "fill": "#FFFFFF",
+                      "content": "선택된 이미지: 12장",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "0GHYe",
+                  "name": "biGrid",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "qlRKN",
+                      "name": "img1",
+                      "width": 100,
+                      "height": 100,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711162338.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "tGBjH",
+                      "name": "img2",
+                      "width": 100,
+                      "height": 100,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711176026.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "BG3fu",
+                      "name": "img3",
+                      "width": 100,
+                      "height": 100,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711184960.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ohSFq",
+          "name": "btnBatch",
+          "width": 354,
+          "height": 56,
+          "fill": "#6366F1",
+          "cornerRadius": 16,
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "6cNi4",
+              "name": "btnBatchText",
+              "fill": "#FFFFFF",
+              "content": "일괄 처리 시작",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "JIN3n",
+      "x": 1800,
+      "y": 1000,
+      "name": "PhotoEdit - Presets (Korean)",
+      "clip": true,
+      "width": 402,
+      "height": 874,
+      "fill": "#0A0A0C",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "gXLnl",
+          "name": "sb2",
+          "width": "fill_container",
+          "height": 62,
+          "fill": "#0B0B0E",
+          "padding": [
+            0,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "2hYx7",
+              "name": "homeTime",
+              "fill": "#FAFAF9",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "VZAex",
+              "name": "homeStatusSpacer",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "nWknV",
+              "name": "homeStatusIcons",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PcvcR",
+                  "name": "homeSignal",
+                  "fill": "#FAFAF9",
+                  "content": "●●●●○",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "oPN9y",
+                  "name": "homeWifi",
+                  "fill": "#FAFAF9",
+                  "content": "WiFi",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "sOk85",
+                  "name": "homeBattery",
+                  "fill": "#32D583",
+                  "content": "85%",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tdahb",
+          "name": "headerP",
+          "width": "fill_container",
+          "height": 56,
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "cyyIT",
+              "name": "backBtnP",
+              "width": 40,
+              "height": 40,
+              "fill": "#1C1C22",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HQqnj",
+                  "name": "b1P",
+                  "fill": "#FFFFFF",
+                  "content": "←",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "xKzBL",
+              "name": "hTitleP",
+              "fill": "#FFFFFF",
+              "content": "내 프리셋 관리",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "aO7FN",
+              "name": "emptyBtnP",
+              "width": 40,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "uPfxr",
+          "name": "contentP",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "2B43j",
+              "name": "section1",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "B8chZ",
+                  "name": "s1Title",
+                  "fill": "#FFFFFF",
+                  "content": "기본 제공 프리셋",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "bFjto",
+                  "name": "grid1",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "0L50V",
+                      "name": "g1p1",
+                      "width": 100,
+                      "height": 140,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711324621.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "padding": 12,
+                      "justifyContent": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "a8cHC",
+                          "name": "g1t1",
+                          "fill": "#FFFFFF",
+                          "content": "Kodak\nSummer",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "2NDVr",
+                      "name": "g1p2",
+                      "width": 100,
+                      "height": 140,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711333012.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "padding": 12,
+                      "justifyContent": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "iVA5d",
+                          "name": "g1t2",
+                          "fill": "#FFFFFF",
+                          "content": "Fuji\nLandscape",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YN9zl",
+                      "name": "g1p3",
+                      "width": 100,
+                      "height": 140,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711340184.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "padding": 12,
+                      "justifyContent": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jVWDb",
+                          "name": "g1t3",
+                          "fill": "#FFFFFF",
+                          "content": "Lo-Fi\nVintage",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "98DUZ",
+              "name": "section2",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rbqAl",
+                  "name": "s2Title",
+                  "fill": "#FFFFFF",
+                  "content": "내 프리셋",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "IpF5d",
+                  "name": "grid2",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vDSpT",
+                      "name": "g2r1",
+                      "width": "fill_container",
+                      "height": 140,
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "xCL86",
+                          "name": "userP1",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/generated-1772711296344.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "padding": 12,
+                          "justifyContent": "end",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "7rVj8",
+                              "name": "g2t1",
+                              "fill": "#FFFFFF",
+                              "content": "My\nPreset",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "CVeHF",
+                          "name": "userP2",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/generated-1772711305796.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "padding": 12,
+                          "justifyContent": "end",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "NEyn7",
+                              "name": "g2t2",
+                              "fill": "#FFFFFF",
+                              "content": "My\nLook",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "0ZNB9",
+                          "name": "g2p3",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": "#1C1C22",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "gap": 8,
+                          "padding": 12,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Gjfe7",
+                              "name": "g2i3",
+                              "fill": "#FFFFFF",
+                              "content": "➕",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "xEdld",
+                              "name": "g2t3",
+                              "fill": "#8A8A93",
+                              "content": "NEW",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "evsL4",
+                  "name": "footer",
+                  "fill": "#8A8A93",
+                  "content": "길게 눌러서: 편집 | 삭제 | 공유",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bmrGG",
+              "name": "section2",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vDYrr",
+                  "name": "s2Title",
+                  "fill": "#FFFFFF",
+                  "content": "내 프리셋",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "R85D4",
+                  "name": "grid2",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Ba0Gi",
+                      "name": "g2r1",
+                      "width": "fill_container",
+                      "height": 140,
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "AYbKQ",
+                          "name": "userP1",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/generated-1772711347567.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "padding": 12,
+                          "justifyContent": "end",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "8uMYU",
+                              "name": "g2t1",
+                              "fill": "#FFFFFF",
+                              "content": "My\nPreset",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "kcNkJ",
+                          "name": "userP2",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/generated-1772711354672.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "padding": 12,
+                          "justifyContent": "end",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ECEO3",
+                              "name": "g2t2",
+                              "fill": "#FFFFFF",
+                              "content": "My\nLook",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "fXExf",
+                          "name": "g2p3",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": "#1C1C22",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "gap": 8,
+                          "padding": 12,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "G0Ame",
+                              "name": "g2i3",
+                              "fill": "#FFFFFF",
+                              "content": "+",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "wV9ss",
+                              "name": "g2t3",
+                              "fill": "#8A8A93",
+                              "content": "NEW",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "tZoTK",
+                  "name": "footer",
+                  "fill": "#8A8A93",
+                  "content": "길게 눌러서: 편집 | 삭제 | 공유",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "jPDBf",
+      "x": 0,
+      "y": 1950,
+      "name": "Lumera - 스플래시",
+      "clip": true,
+      "width": 402,
+      "height": 874,
+      "fill": "#F7F5F2",
+      "layout": "vertical",
+      "justifyContent": "space_between",
+      "children": [
+        {
+          "type": "frame",
+          "id": "l0WxN",
+          "name": "topSpace",
+          "width": "fill_container",
+          "height": 120
+        },
+        {
+          "type": "frame",
+          "id": "7KI49",
+          "name": "centerContent",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "p9Wms",
+              "name": "logoWrapper",
+              "width": 120,
+              "height": 120,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "file:///Users/admin/new_project/photoedit/icon_cropped.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 40,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center"
+            },
+            {
+              "type": "text",
+              "id": "wDPGb",
+              "name": "title",
+              "fill": "#1A1A1A",
+              "content": "Lumera",
+              "fontFamily": "Fraunces",
+              "fontSize": 48,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "britX",
+              "name": "subtitle",
+              "fill": "#737373",
+              "content": "레트로 필름 사진 스튜디오",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ClScN",
+          "name": "bottomContent",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            0,
+            24,
+            48,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "pN72M",
+              "name": "startBtn",
+              "width": "fill_container",
+              "height": 60,
+              "fill": "#1A1A1A",
+              "cornerRadius": 20,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "YsLjk",
+                  "name": "startText",
+                  "fill": "#FFFFFF",
+                  "content": "시작하기",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "wMjRV",
+      "x": 450,
+      "y": 1950,
+      "name": "Lumera - 홈",
+      "clip": true,
+      "width": 402,
+      "height": 874,
+      "fill": "#F7F5F2",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "zwUBo",
+          "name": "statusBar",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "zRJVa",
+              "name": "time",
+              "fill": "#1A1A1A",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "vpKNa",
+              "name": "icons",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZBcTk",
+                  "name": "i1",
+                  "fill": "#1A1A1A",
+                  "content": "●●●●○",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "nYh2t",
+                  "name": "i2",
+                  "fill": "#1A1A1A",
+                  "content": "WiFi",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "oz7ug",
+                  "name": "i3",
+                  "fill": "#1A1A1A",
+                  "content": "85%",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "f21v5",
+          "name": "hero",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            32,
+            24,
+            24,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "c5PlR",
+              "name": "t1",
+              "fill": "#1A1A1A",
+              "content": "Lumera",
+              "fontFamily": "Fraunces",
+              "fontSize": 36,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "rmZME",
+              "name": "t2",
+              "fill": "#737373",
+              "content": "당신의 완벽한 빈티지 컷",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "UzhJ3",
+          "name": "grid",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            0,
+            24,
+            24,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "dHpYc",
+              "name": "row1",
+              "width": "fill_container",
+              "height": 160,
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "7OC96",
+                  "name": "cardGallery",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 24,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "efLqa",
+                      "name": "galAIIcon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711467988.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "text",
+                      "id": "WZSC9",
+                      "name": "gText",
+                      "fill": "#1A1A1A",
+                      "content": "갤러리에서 선택",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "akGba",
+                  "name": "cardCamera",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 24,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "UXNMj",
+                      "name": "camAIIcon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711473298.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "text",
+                      "id": "wdtAL",
+                      "name": "cText",
+                      "fill": "#1A1A1A",
+                      "content": "카메라로 촬영",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "oXTMv",
+              "name": "row2",
+              "width": "fill_container",
+              "height": 160,
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ndOns",
+                  "name": "cardBatch",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 24,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "u8tsc",
+                      "name": "batchAIIcon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711478638.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "text",
+                      "id": "KDpTD",
+                      "name": "bText",
+                      "fill": "#1A1A1A",
+                      "content": "일괄 처리",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FJNkp",
+                  "name": "cardPreset",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 24,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "uDhSt",
+                      "name": "presetAIIcon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711484351.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "text",
+                      "id": "PhHlo",
+                      "name": "pText",
+                      "fill": "#1A1A1A",
+                      "content": "프리셋 관리",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "9aJqd",
+          "name": "featuredL",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            0,
+            24,
+            24,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "tT0aT",
+              "name": "titleL",
+              "fill": "#1A1A1A",
+              "content": "추천 프리셋",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "fIbQM",
+              "name": "presetScrollL",
+              "width": "fill_container",
+              "height": 160,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "jICj3",
+                  "name": "p1L",
+                  "width": 120,
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772711492372.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VvjJz",
+                      "name": "t1L",
+                      "fill": "#FFFFFF",
+                      "content": "Sun\nKissed",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "d9NJj",
+                  "name": "p2L",
+                  "width": 120,
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772711500113.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Q2oPc",
+                      "name": "t2L",
+                      "fill": "#FFFFFF",
+                      "content": "Classic\nChrome",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hkuoI",
+                  "name": "p3L",
+                  "width": 120,
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772711563080.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3Z8Em",
+                      "name": "t3L",
+                      "fill": "#FFFFFF",
+                      "content": "Soft\nMemory",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "dG2z4",
+      "x": 900,
+      "y": 1950,
+      "name": "Lumera - 편집",
+      "clip": true,
+      "width": 402,
+      "height": 874,
+      "fill": "#F7F5F2",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "unomR",
+          "name": "sbE",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "P89yF",
+              "name": "time",
+              "fill": "#1A1A1A",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "Wy9QC",
+              "name": "icons",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "aqkCx",
+                  "name": "i1",
+                  "fill": "#1A1A1A",
+                  "content": "●●●●○",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "psMPw",
+                  "name": "i2",
+                  "fill": "#1A1A1A",
+                  "content": "WiFi",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "5Wm4d",
+                  "name": "i3",
+                  "fill": "#1A1A1A",
+                  "content": "85%",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NPoHM",
+          "name": "headerE",
+          "width": "fill_container",
+          "height": 56,
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "YiOvT",
+              "name": "backE",
+              "width": 44,
+              "height": 44,
+              "fill": "#FFFFFF",
+              "cornerRadius": 14,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "irQA6",
+                  "name": "b1E",
+                  "fill": "#1A1A1A",
+                  "content": "←",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "t9H08",
+              "name": "hTitleE",
+              "fill": "#1A1A1A",
+              "content": "사진 편집",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "E36g6",
+              "name": "saveE",
+              "width": 44,
+              "height": 44,
+              "fill": "#1A1A1A",
+              "cornerRadius": 14,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Y1c8g",
+                  "name": "s1E",
+                  "fill": "#FFFFFF",
+                  "content": "✓",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "1EkuC",
+          "name": "imgWrapperE",
+          "width": "fill_container",
+          "height": 340,
+          "layout": "vertical",
+          "padding": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "jmzjz",
+              "name": "imgPreviewE",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1772711613877.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 28,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "8YqBR",
+                  "name": "blurILayer",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kUPmQ",
+                      "name": "bc1",
+                      "width": 120,
+                      "height": 120,
+                      "cornerRadius": 60
+                    },
+                    {
+                      "type": "frame",
+                      "id": "2bCcP",
+                      "name": "bc2",
+                      "width": 240,
+                      "height": 240,
+                      "cornerRadius": 120
+                    },
+                    {
+                      "type": "frame",
+                      "id": "OHfEH",
+                      "name": "bp",
+                      "width": 16,
+                      "height": 16,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 8
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Y2g1r",
+                  "name": "v2E",
+                  "fill": "#737373",
+                  "content": "Kodak Portra 400",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Yuddv",
+          "name": "bottomL",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": [
+            40,
+            40,
+            0,
+            0
+          ],
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            32,
+            24,
+            40,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "KIYy7",
+              "name": "tabsL",
+              "width": "fill_container",
+              "height": 48,
+              "fill": "#F7F5F2",
+              "cornerRadius": 16,
+              "gap": 8,
+              "padding": 6,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "BWWz8",
+                  "name": "tabBlurL",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 10,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BimqZ",
+                      "name": "tt1",
+                      "fill": "#FFFFFF",
+                      "content": "블러",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "YY3WV",
+                  "name": "tabFilterL",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 10,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "luOGP",
+                      "name": "tt2",
+                      "fill": "#737373",
+                      "content": "필터",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "k8e2o",
+                  "name": "tabGrainL",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 10,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eTpKr",
+                      "name": "tt3",
+                      "fill": "#737373",
+                      "content": "그레인",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "z5qy1",
+              "name": "sliderContainer",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Hilxc",
+                  "name": "sl1Grp",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "dWiTW",
+                      "name": "sl1Header",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "sC63k",
+                          "name": "sl1T1",
+                          "fill": "#1A1A1A",
+                          "content": "블러 강도",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "9JjmI",
+                          "name": "sl1T2",
+                          "fill": "#1A1A1A",
+                          "content": "80%",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "OKOWS",
+                      "name": "sl1Track",
+                      "width": "fill_container",
+                      "height": 6,
+                      "fill": "#EAE6DF",
+                      "cornerRadius": 3,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Rg2As",
+                          "name": "sl1Bar",
+                          "height": "fill_container",
+                          "fill": "#1A1A1A",
+                          "cornerRadius": 3,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "W50Q6",
+                              "name": "sl1Handle",
+                              "width": 20,
+                              "height": 20,
+                              "fill": "#FFFFFF",
+                              "cornerRadius": 10
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "smjt9",
+                  "name": "sl2Grp",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "7febQ",
+                      "name": "sl2Header",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "YEhuq",
+                          "name": "sl2T1",
+                          "fill": "#1A1A1A",
+                          "content": "퍼짐 (반경)",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ygrKf",
+                          "name": "sl2T2",
+                          "fill": "#1A1A1A",
+                          "content": "60",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "svF5h",
+                      "name": "sl2Track",
+                      "width": "fill_container",
+                      "height": 6,
+                      "fill": "#EAE6DF",
+                      "cornerRadius": 3,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "JBmx9",
+                          "name": "sl2Bar",
+                          "height": "fill_container",
+                          "fill": "#1A1A1A",
+                          "cornerRadius": 3,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "onjIE",
+                              "name": "sl2Handle",
+                              "width": 20,
+                              "height": 20,
+                              "fill": "#FFFFFF",
+                              "cornerRadius": 10
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "uXtEv",
+              "name": "actL",
+              "width": "fill_container",
+              "height": 56,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "h6iSE",
+                  "name": "canL",
+                  "width": 80,
+                  "height": "fill_container",
+                  "fill": "#F7F5F2",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SNy7B",
+                      "name": "cl",
+                      "fill": "#737373",
+                      "content": "취소",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZvDe4",
+                  "name": "preL",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 16,
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7LkmO",
+                      "name": "pl1",
+                      "fill": "#FFFFFF",
+                      "content": "프리셋 저장",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HvLrx",
+                  "name": "expL",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VApJ8",
+                      "name": "el1",
+                      "fill": "#1A1A1A",
+                      "content": "내보내기",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "0oQwk",
+          "name": "modalBgL",
+          "width": 402,
+          "height": 874,
+          "fill": "#1A1A1AE6",
+          "layout": "vertical",
+          "padding": [
+            0,
+            24,
+            40,
+            24
+          ],
+          "justifyContent": "end",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "sQpAo",
+              "name": "modalMenuL",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 32,
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "KVMQe",
+                  "name": "mTitleL",
+                  "fill": "#1A1A1A",
+                  "content": "내보내기",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "oSPWf",
+                  "name": "mBtn1L",
+                  "width": "fill_container",
+                  "height": 60,
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NZ99D",
+                      "name": "mt1L",
+                      "fill": "#FFFFFF",
+                      "content": "갤러리에 저장",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "knEHy",
+                  "name": "mBtn2L",
+                  "width": "fill_container",
+                  "height": 60,
+                  "fill": "#F7F5F2",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "o4NmK",
+                      "name": "mt2L",
+                      "fill": "#1A1A1A",
+                      "content": "Instagram 공유",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "uyXGm",
+                  "name": "mBtn3L",
+                  "width": "fill_container",
+                  "height": 60,
+                  "fill": "#F7F5F2",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3QuKL",
+                      "name": "mt3L",
+                      "fill": "#1A1A1A",
+                      "content": "기타 앱으로 공유",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "aaKQk",
+      "x": 1350,
+      "y": 1950,
+      "name": "Lumera - 일괄처리",
+      "clip": true,
+      "width": 402,
+      "height": 874,
+      "fill": "#F7F5F2",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "zP4c4",
+          "name": "sbB",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "a6c9B",
+              "name": "time",
+              "fill": "#1A1A1A",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "gIUbi",
+              "name": "icons",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BPUxo",
+                  "name": "i1",
+                  "fill": "#1A1A1A",
+                  "content": "●●●●○",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "lN7Ij",
+                  "name": "i2",
+                  "fill": "#1A1A1A",
+                  "content": "WiFi",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "lJa1j",
+                  "name": "i3",
+                  "fill": "#1A1A1A",
+                  "content": "85%",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "vx92j",
+          "name": "headerB",
+          "width": "fill_container",
+          "height": 56,
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "W9ruD",
+              "name": "backB",
+              "width": 44,
+              "height": 44,
+              "fill": "#FFFFFF",
+              "cornerRadius": 14,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VODVc",
+                  "name": "b1B",
+                  "fill": "#1A1A1A",
+                  "content": "←",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "17WkR",
+              "name": "hTitleB",
+              "fill": "#1A1A1A",
+              "content": "일괄 처리",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "BxIus",
+              "name": "emptyB",
+              "width": 44,
+              "height": 44
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xk54m",
+          "name": "contentB",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            24,
+            24,
+            120,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "6cwjI",
+              "name": "presetSecB",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DEq91",
+                  "name": "pTitleB",
+                  "fill": "#1A1A1A",
+                  "content": "적용할 프리셋",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "8F2NM",
+                  "name": "pDropB",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Txt6U",
+                      "name": "pdText",
+                      "fill": "#1A1A1A",
+                      "content": "Kodak Portra 400",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rgEjY",
+                      "name": "pdIcon",
+                      "fill": "#737373",
+                      "content": "▼",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qHCjK",
+              "name": "imgSecB",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gCRCP",
+                  "name": "imgHeaderB",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Cvpv3",
+                      "name": "imgTitleB",
+                      "fill": "#1A1A1A",
+                      "content": "선택된 이미지: 12장",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ndil4",
+                      "name": "imgCountB",
+                      "fill": "#737373",
+                      "content": "추가하기 +",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "8esG5",
+                  "name": "imgGridB",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "u5ZXY",
+                      "name": "i1",
+                      "width": 120,
+                      "height": 160,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711819310.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 20,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "1oKyV",
+                      "name": "i2",
+                      "width": 120,
+                      "height": 160,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711826714.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 20,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "oYbUV",
+                      "name": "i3",
+                      "width": 120,
+                      "height": 160,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711834341.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 20,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "sZXVv",
+          "name": "btnBatchL",
+          "width": 354,
+          "height": 60,
+          "fill": "#1A1A1A",
+          "cornerRadius": 20,
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "N9PKr",
+              "name": "btnBatchTextL",
+              "fill": "#FFFFFF",
+              "content": "일괄 처리 시작",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "gbfFo",
+      "x": 1800,
+      "y": 1950,
+      "name": "Lumera - 프리셋",
+      "clip": true,
+      "width": 402,
+      "height": 874,
+      "fill": "#F7F5F2",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "OsJhb",
+          "name": "sbPL",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "3Wech",
+              "name": "time",
+              "fill": "#1A1A1A",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "hgwle",
+              "name": "icons",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wNo7E",
+                  "name": "i1",
+                  "fill": "#1A1A1A",
+                  "content": "●●●●○",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "X6vJW",
+                  "name": "i2",
+                  "fill": "#1A1A1A",
+                  "content": "WiFi",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "9b9KV",
+                  "name": "i3",
+                  "fill": "#1A1A1A",
+                  "content": "85%",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "PeJ9x",
+          "name": "headerPL",
+          "width": "fill_container",
+          "height": 56,
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "kp7df",
+              "name": "backPL",
+              "width": 44,
+              "height": 44,
+              "fill": "#FFFFFF",
+              "cornerRadius": 14,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wrcUU",
+                  "name": "b1PL",
+                  "fill": "#1A1A1A",
+                  "content": "←",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "2UdUM",
+              "name": "hTitlePL",
+              "fill": "#1A1A1A",
+              "content": "프리셋 관리",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "1RP3Y",
+              "name": "emptyBtnPL",
+              "width": 44,
+              "height": 44
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Xycyj",
+          "name": "contentPL",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "GLC4s",
+              "name": "section1PL",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xO7qB",
+                  "name": "s1TitlePL",
+                  "fill": "#1A1A1A",
+                  "content": "기본 제공 프리셋",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "90wQj",
+                  "name": "grid1PL",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ZGBhL",
+                      "name": "g1p1L",
+                      "width": 120,
+                      "height": 160,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711763117.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 20,
+                      "layout": "vertical",
+                      "padding": 16,
+                      "justifyContent": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZlE5B",
+                          "name": "g1t1L",
+                          "fill": "#FFFFFF",
+                          "content": "Sun\nKissed",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vsyta",
+                      "name": "g1p2L",
+                      "width": 120,
+                      "height": 160,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772711772836.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 20,
+                      "layout": "vertical",
+                      "padding": 16,
+                      "justifyContent": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "y5oK2",
+                          "name": "g1t2L",
+                          "fill": "#FFFFFF",
+                          "content": "Classic\nChrome",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ukHCF",
+              "name": "section2PL",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qhfCp",
+                  "name": "s2TitlePL",
+                  "fill": "#1A1A1A",
+                  "content": "내 프리셋",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "rfUmm",
+                  "name": "grid2PL",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "cCLq5",
+                      "name": "g2r1PL",
+                      "width": "fill_container",
+                      "height": 160,
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "keMx5",
+                          "name": "userP1L",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/generated-1772711780586.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 20,
+                          "layout": "vertical",
+                          "padding": 16,
+                          "justifyContent": "end",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "6Kc5L",
+                              "name": "g2t1L",
+                              "fill": "#FFFFFF",
+                              "content": "My\nPreset",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "QzM5c",
+                          "name": "userP2L",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 20,
+                          "layout": "vertical",
+                          "gap": 8,
+                          "padding": 16,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "V3hKa",
+                              "name": "g2i3L",
+                              "fill": "#1A1A1A",
+                              "content": "➕",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "eR71O",
+                              "name": "g2t3L",
+                              "fill": "#737373",
+                              "content": "NEW",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "cdIuI",
+                  "name": "footerPL",
+                  "fill": "#8A8A93",
+                  "content": "길게 눌러서: 편집 | 삭제 | 공유",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "M4oqu",
+      "x": 2300,
+      "y": 1950,
+      "name": "🎨 Lumera 스타일 가이드",
+      "width": 800,
+      "height": 600,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": 40,
+      "children": [
+        {
+          "type": "text",
+          "id": "ZbqJQ",
+          "name": "sgTitle",
+          "fill": "#1A1A1A",
+          "content": "Lumera Design System",
+          "fontFamily": "Fraunces",
+          "fontSize": 32,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "7LYku",
+          "name": "Colors",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "CDVUA",
+              "name": "colorTitle",
+              "fill": "#737373",
+              "content": "Colors",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600",
+              "letterSpacing": 1
+            },
+            {
+              "type": "frame",
+              "id": "l9TwN",
+              "name": "colorRow",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "7zllf",
+                  "name": "c1",
+                  "width": 80,
+                  "height": 80,
+                  "fill": "#F7F5F2",
+                  "cornerRadius": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "OLQT4",
+                  "name": "c2",
+                  "width": 80,
+                  "height": 80,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "7nXWo",
+                  "name": "c3",
+                  "width": 80,
+                  "height": 80,
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "JaOJY",
+                  "name": "c4",
+                  "width": 80,
+                  "height": 80,
+                  "fill": "#737373",
+                  "cornerRadius": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "EOCmg",
+                  "name": "c5",
+                  "width": 80,
+                  "height": 80,
+                  "fill": "#E8C4A8",
+                  "cornerRadius": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "h3XYL",
+                  "name": "c6",
+                  "width": 80,
+                  "height": 80,
+                  "fill": "#A8C4B8",
+                  "cornerRadius": 16
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "m4DMj",
+              "name": "colorLabels",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AAlex",
+                  "name": "cl1",
+                  "fill": "#737373",
+                  "content": "bg-primary\n#F7F5F2",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "HYE6N",
+                  "name": "cl2",
+                  "fill": "#737373",
+                  "content": "bg-card\n#FFFFFF",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "sk636",
+                  "name": "cl3",
+                  "fill": "#737373",
+                  "content": "accent\n#1A1A1A",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "cFSZe",
+                  "name": "cl4",
+                  "fill": "#737373",
+                  "content": "text-muted\n#737373",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "WXCTC",
+                  "name": "cl5",
+                  "fill": "#737373",
+                  "content": "filter-warm\n#E8C4A8",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Qb9O8",
+                  "name": "cl6",
+                  "fill": "#737373",
+                  "content": "filter-cool\n#A8C4B8",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "B0u8t",
+          "name": "Typography",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "CylRN",
+              "name": "typoTitle",
+              "fill": "#737373",
+              "content": "Typography",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600",
+              "letterSpacing": 1
+            },
+            {
+              "type": "frame",
+              "id": "myX85",
+              "name": "typoRow",
+              "gap": 40,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sotXT",
+                  "name": "t1",
+                  "fill": "#1A1A1A",
+                  "content": "Lumera",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 48,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "POv29",
+                  "name": "t2",
+                  "fill": "#1A1A1A",
+                  "content": "제목 타이틀",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "rUCSj",
+                  "name": "t3",
+                  "fill": "#1A1A1A",
+                  "content": "본문 텍스트",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "l1FhB",
+                  "name": "t4",
+                  "fill": "#737373",
+                  "content": "보조 텍스트",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "byPxN",
+              "name": "typoLabels",
+              "gap": 40,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eoEMl",
+                  "name": "tl1",
+                  "fill": "#737373",
+                  "content": "Fraunces 48/700",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "kPABv",
+                  "name": "tl2",
+                  "fill": "#737373",
+                  "content": "Fraunces 24/600",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "TGJdr",
+                  "name": "tl3",
+                  "fill": "#737373",
+                  "content": "Inter 16/400",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "RRWW9",
+                  "name": "tl4",
+                  "fill": "#737373",
+                  "content": "Inter 14/500",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "V4nl0",
+          "name": "Components",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "GiogM",
+              "name": "compTitle",
+              "fill": "#737373",
+              "content": "Components",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600",
+              "letterSpacing": 1
+            },
+            {
+              "type": "frame",
+              "id": "4hAgZ",
+              "name": "compRow",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "YdlX8",
+                  "name": "btn1",
+                  "width": 140,
+                  "height": 56,
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xVel6",
+                      "name": "btn1Text",
+                      "fill": "#FFFFFF",
+                      "content": "시작하기",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EMYBK",
+                  "name": "btn2",
+                  "width": 140,
+                  "height": 56,
+                  "fill": "#F5F5F5",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YeOLl",
+                      "name": "btn2Text",
+                      "fill": "#737373",
+                      "content": "취소",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fxJFb",
+                  "name": "btn3",
+                  "width": 140,
+                  "height": 56,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Vu98l",
+                      "name": "btn3Text",
+                      "fill": "#1A1A1A",
+                      "content": "프리셋 저장",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OqEbb",
+                  "name": "icon1",
+                  "width": 44,
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Nsaih",
+                      "name": "icon1Text",
+                      "fill": "#1A1A1A",
+                      "content": "←",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "knAFA",
+                  "name": "icon2",
+                  "width": 44,
+                  "height": 44,
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "19OXt",
+                      "name": "icon2Text",
+                      "fill": "#FFFFFF",
+                      "content": "✓",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "accent": {
+      "type": "color",
+      "value": "#1A1A1A"
+    },
+    "bg-muted": {
+      "type": "color",
+      "value": "#E5E0DA"
+    },
+    "bg-primary": {
+      "type": "color",
+      "value": "#F7F5F2"
+    },
+    "bg-secondary": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "bg-tertiary": {
+      "type": "color",
+      "value": "#F5F5F5"
+    },
+    "border-default": {
+      "type": "color",
+      "value": "#E5E5E5"
+    },
+    "border-strong": {
+      "type": "color",
+      "value": "#1A1A1A"
+    },
+    "radius-lg": {
+      "type": "number",
+      "value": 20
+    },
+    "radius-md": {
+      "type": "number",
+      "value": 16
+    },
+    "radius-sm": {
+      "type": "number",
+      "value": 12
+    },
+    "radius-xl": {
+      "type": "number",
+      "value": 24
+    },
+    "spacing-lg": {
+      "type": "number",
+      "value": 16
+    },
+    "spacing-md": {
+      "type": "number",
+      "value": 12
+    },
+    "spacing-sm": {
+      "type": "number",
+      "value": 8
+    },
+    "spacing-xl": {
+      "type": "number",
+      "value": 24
+    },
+    "text-inverse": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "text-primary": {
+      "type": "color",
+      "value": "#1A1A1A"
+    },
+    "text-secondary": {
+      "type": "color",
+      "value": "#737373"
+    },
+    "text-tertiary": {
+      "type": "color",
+      "value": "#A3A3A3"
+    }
+  }
+}

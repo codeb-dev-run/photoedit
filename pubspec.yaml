@@ -1,0 +1,62 @@
+name: photoedit
+description: "레트로 필름 사진 편집 앱 - 블러, 필름 필터, 그레인, 리사이즈"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # 이미지 처리 핵심
+  image: ^4.3.0
+
+  # 이미지 I/O
+  image_picker: ^1.1.2
+  image_cropper: ^8.0.2
+  flutter_image_compress: ^2.3.0
+
+  # 데이터 저장 (프리셋) - JSON 파일 기반
+  shared_preferences: ^2.3.4
+
+  # 상태 관리
+  flutter_riverpod: ^2.6.1
+
+  # 라우팅
+  go_router: ^14.6.2
+
+  # 유틸리티
+  path_provider: ^2.1.5
+  share_plus: ^10.1.4
+  permission_handler: ^11.3.1
+  uuid: ^4.5.1
+  path: ^1.9.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "icon_cropped.png"
+  web:
+    generate: true
+    image_path: "icon_cropped.png"
+    background_color: "#F7F5F2"
+    theme_color: "#F7F5F2"
+  windows:
+    generate: true
+    image_path: "icon_cropped.png"
+  macos:
+    generate: true
+    image_path: "icon_cropped.png"
