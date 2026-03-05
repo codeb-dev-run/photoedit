@@ -171,7 +171,9 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
 
                   // 블러 영역 오버레이 (블러 탭에서만)
                   if (selectedTab == EditorTab.blur && editorState.isBlurEnabled)
-                    _buildBlurOverlay(context, ref, editorState, constraints),
+                    editorState.blurRegion.mode == BlurMode.pen
+                        ? _buildPenBlurOverlay(context, ref, editorState, constraints)
+                        : _buildBlurOverlay(context, ref, editorState, constraints),
 
                   // 필터 이름 오버레이
                   if (editorState.selectedFilter != null)
@@ -305,6 +307,89 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
 
         // 리사이즈 핸들들
         ..._buildResizeHandles(ref, rect, containerSize, isCircle),
+      ],
+    );
+  }
+
+  /// 펜 블러 오버레이 (손으로 그리는 방식)
+  Widget _buildPenBlurOverlay(
+    BuildContext context,
+    WidgetRef ref,
+    EditorState editorState,
+    BoxConstraints constraints,
+  ) {
+    final containerSize = Size(constraints.maxWidth, constraints.maxHeight);
+    final blurSigma = editorState.blurIntensity * 25;
+    final region = editorState.blurRegion;
+
+    return Stack(
+      children: [
+        // 펜 블러 영역 그리기 + 터치 감지
+        Positioned.fill(
+          child: GestureDetector(
+            onPanStart: (details) {
+              final localPos = details.localPosition;
+              final normalized = Offset(
+                localPos.dx / containerSize.width,
+                localPos.dy / containerSize.height,
+              );
+              ref.read(editorStateProvider.notifier).startPenStroke(normalized);
+            },
+            onPanUpdate: (details) {
+              final localPos = details.localPosition;
+              final normalized = Offset(
+                (localPos.dx / containerSize.width).clamp(0.0, 1.0),
+                (localPos.dy / containerSize.height).clamp(0.0, 1.0),
+              );
+              ref.read(editorStateProvider.notifier).addPenPoint(normalized);
+            },
+            child: CustomPaint(
+              painter: _PenBlurPainter(
+                strokes: region.penStrokes,
+                containerSize: containerSize,
+                blurSigma: blurSigma,
+                opacity: region.opacity,
+                color: region.color,
+              ),
+              child: Container(color: Colors.transparent),
+            ),
+          ),
+        ),
+
+        // 블러 효과 적용 (BackdropFilter)
+        if (region.penStrokes.isNotEmpty)
+          Positioned.fill(
+            child: ClipPath(
+              clipper: _PenStrokeClipper(
+                strokes: region.penStrokes,
+                containerSize: containerSize,
+              ),
+              child: BackdropFilter(
+                filter: ui.ImageFilter.blur(
+                  sigmaX: blurSigma,
+                  sigmaY: blurSigma,
+                ),
+                child: Container(
+                  color: region.color.alpha > 0
+                      ? region.color.withOpacity(region.opacity * 0.3)
+                      : Colors.white.withOpacity(0.0),
+                ),
+              ),
+            ),
+          ),
+
+        // 그리기 가이드 (현재 그리는 영역 표시)
+        Positioned.fill(
+          child: IgnorePointer(
+            child: CustomPaint(
+              painter: _PenStrokeOutlinePainter(
+                strokes: region.penStrokes,
+                containerSize: containerSize,
+                strokeColor: Colors.white.withOpacity(0.7),
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
@@ -516,21 +601,22 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
 
   Widget _buildBlurPanel(WidgetRef ref, EditorState editorState) {
     final region = editorState.blurRegion;
+    final isPenMode = region.mode == BlurMode.pen;
 
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 상단: 활성화 토글 + 모양 선택
+          // 상단: 활성화 토글 + 모드 선택
           Row(
             children: [
               // 활성화 토글
               Expanded(
                 child: Row(
                   children: [
-                    const Text(
-                      '블러 스티커',
-                      style: TextStyle(
+                    Text(
+                      isPenMode ? '펜 블러' : '스티커 블러',
+                      style: const TextStyle(
                         fontFamily: 'Inter',
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
@@ -549,11 +635,78 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
                   ],
                 ),
               ),
-              // 모양 선택
-              _buildShapeToggle(ref, region.shape),
+              // 모드 선택 (스티커/펜)
+              _buildModeToggle(ref, region.mode),
             ],
           ),
           const SizedBox(height: 12),
+
+          // 펜 모드일 때: 펜 굵기 + 실행취소
+          if (isPenMode) ...[
+            Row(
+              children: [
+                Expanded(
+                  child: _LumeraSlider(
+                    label: '펜 굵기',
+                    value: region.penWidth / 0.2, // 0~1로 정규화
+                    onChanged: editorState.isBlurEnabled
+                        ? (value) {
+                            ref.read(editorStateProvider.notifier).setPenWidth(value * 0.2);
+                          }
+                        : null,
+                  ),
+                ),
+                const SizedBox(width: 8),
+                // 실행취소 버튼
+                GestureDetector(
+                  onTap: () => ref.read(editorStateProvider.notifier).undoPenStroke(),
+                  child: Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: AppTheme.backgroundColor,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Icon(Icons.undo, color: AppTheme.primaryColor, size: 20),
+                  ),
+                ),
+                const SizedBox(width: 4),
+                // 전체 삭제 버튼
+                GestureDetector(
+                  onTap: () => ref.read(editorStateProvider.notifier).clearPenStrokes(),
+                  child: Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: AppTheme.backgroundColor,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Icon(Icons.delete_outline, color: Colors.red, size: 20),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Text(
+              '이미지 위에 손가락으로 그려서 블러 영역을 지정하세요',
+              style: TextStyle(
+                fontFamily: 'Inter',
+                fontSize: 11,
+                color: AppTheme.textMuted.withOpacity(0.7),
+              ),
+            ),
+          ],
+
+          // 스티커 모드일 때: 모양 선택
+          if (!isPenMode) ...[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                _buildShapeToggle(ref, region.shape),
+              ],
+            ),
+          ],
+          const SizedBox(height: 8),
 
           // 블러 강도 슬라이더
           _LumeraSlider(
@@ -567,9 +720,9 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
           ),
           const SizedBox(height: 8),
 
-          // 퍼짐(페더) 슬라이더
+          // 퍼짐(페더)/투명도 슬라이더
           _LumeraSlider(
-            label: '경계 퍼짐',
+            label: isPenMode ? '투명도' : '경계 퍼짐',
             value: region.opacity,
             onChanged: editorState.isBlurEnabled
                 ? (value) {
@@ -577,11 +730,78 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
                   }
                 : null,
           ),
-          const SizedBox(height: 8),
 
-          // 색상 선택
-          _buildColorSelector(ref, region.color, editorState.isBlurEnabled),
+          // 색상 선택 (스티커 모드만)
+          if (!isPenMode) ...[
+            const SizedBox(height: 8),
+            _buildColorSelector(ref, region.color, editorState.isBlurEnabled),
+          ],
         ],
+      ),
+    );
+  }
+
+  /// 블러 모드 토글 (스티커/펜)
+  Widget _buildModeToggle(WidgetRef ref, BlurMode currentMode) {
+    return Container(
+      decoration: BoxDecoration(
+        color: AppTheme.backgroundColor,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      padding: const EdgeInsets.all(4),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _buildModeButton(
+            ref,
+            Icons.crop_square,
+            '스티커',
+            BlurMode.shape,
+            currentMode == BlurMode.shape,
+          ),
+          const SizedBox(width: 4),
+          _buildModeButton(
+            ref,
+            Icons.draw,
+            '펜',
+            BlurMode.pen,
+            currentMode == BlurMode.pen,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildModeButton(
+    WidgetRef ref,
+    IconData icon,
+    String label,
+    BlurMode mode,
+    bool isSelected,
+  ) {
+    return GestureDetector(
+      onTap: () => ref.read(editorStateProvider.notifier).setBlurMode(mode),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        decoration: BoxDecoration(
+          color: isSelected ? AppTheme.primaryColor : Colors.transparent,
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Row(
+          children: [
+            Icon(icon, color: isSelected ? Colors.white : AppTheme.textMuted, size: 16),
+            const SizedBox(width: 4),
+            Text(
+              label,
+              style: TextStyle(
+                fontFamily: 'Inter',
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: isSelected ? Colors.white : AppTheme.textMuted,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -1295,5 +1515,194 @@ class GrainPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant GrainPainter oldDelegate) {
     return oldDelegate.intensity != intensity;
+  }
+}
+
+/// 펜 블러 영역 페인터 (그린 영역 시각화)
+class _PenBlurPainter extends CustomPainter {
+  final List<PenStroke> strokes;
+  final Size containerSize;
+  final double blurSigma;
+  final double opacity;
+  final Color color;
+
+  _PenBlurPainter({
+    required this.strokes,
+    required this.containerSize,
+    required this.blurSigma,
+    required this.opacity,
+    required this.color,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    // 그린 영역을 반투명하게 표시 (미리보기)
+    for (final stroke in strokes) {
+      if (stroke.points.length < 2) continue;
+
+      final paint = Paint()
+        ..color = (color.alpha > 0 ? color : Colors.blue).withOpacity(opacity * 0.3)
+        ..strokeWidth = stroke.strokeWidth * containerSize.width
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round
+        ..style = PaintingStyle.stroke;
+
+      final path = Path();
+      final firstPoint = stroke.points.first;
+      path.moveTo(
+        firstPoint.dx * containerSize.width,
+        firstPoint.dy * containerSize.height,
+      );
+
+      for (int i = 1; i < stroke.points.length; i++) {
+        final point = stroke.points[i];
+        path.lineTo(
+          point.dx * containerSize.width,
+          point.dy * containerSize.height,
+        );
+      }
+
+      canvas.drawPath(path, paint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _PenBlurPainter oldDelegate) {
+    return oldDelegate.strokes != strokes ||
+        oldDelegate.blurSigma != blurSigma ||
+        oldDelegate.opacity != opacity;
+  }
+}
+
+/// 펜 스트로크 외곽선 페인터 (그리기 가이드)
+class _PenStrokeOutlinePainter extends CustomPainter {
+  final List<PenStroke> strokes;
+  final Size containerSize;
+  final Color strokeColor;
+
+  _PenStrokeOutlinePainter({
+    required this.strokes,
+    required this.containerSize,
+    required this.strokeColor,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    for (final stroke in strokes) {
+      if (stroke.points.length < 2) continue;
+
+      final paint = Paint()
+        ..color = strokeColor
+        ..strokeWidth = 2
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round
+        ..style = PaintingStyle.stroke;
+
+      final path = Path();
+      final firstPoint = stroke.points.first;
+      path.moveTo(
+        firstPoint.dx * containerSize.width,
+        firstPoint.dy * containerSize.height,
+      );
+
+      for (int i = 1; i < stroke.points.length; i++) {
+        final point = stroke.points[i];
+        path.lineTo(
+          point.dx * containerSize.width,
+          point.dy * containerSize.height,
+        );
+      }
+
+      canvas.drawPath(path, paint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _PenStrokeOutlinePainter oldDelegate) {
+    return oldDelegate.strokes != strokes;
+  }
+}
+
+/// 펜 스트로크 클리퍼 (BackdropFilter 적용 영역)
+class _PenStrokeClipper extends CustomClipper<Path> {
+  final List<PenStroke> strokes;
+  final Size containerSize;
+
+  _PenStrokeClipper({
+    required this.strokes,
+    required this.containerSize,
+  });
+
+  @override
+  Path getClip(Size size) {
+    final path = Path();
+
+    for (final stroke in strokes) {
+      if (stroke.points.length < 2) continue;
+
+      final strokePath = Path();
+      final firstPoint = stroke.points.first;
+      strokePath.moveTo(
+        firstPoint.dx * size.width,
+        firstPoint.dy * size.height,
+      );
+
+      for (int i = 1; i < stroke.points.length; i++) {
+        final point = stroke.points[i];
+        strokePath.lineTo(
+          point.dx * size.width,
+          point.dy * size.height,
+        );
+      }
+
+      // 스트로크를 영역으로 변환 (strokeWidth 반영)
+      final strokePaint = Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = stroke.strokeWidth * size.width
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round;
+
+      // Path를 두꺼운 영역으로 변환
+      final strokedPath = strokePath.shift(Offset.zero);
+
+      // 간단히 각 점 주변에 원을 추가하여 영역 생성
+      for (final point in stroke.points) {
+        path.addOval(Rect.fromCenter(
+          center: Offset(point.dx * size.width, point.dy * size.height),
+          width: stroke.strokeWidth * size.width,
+          height: stroke.strokeWidth * size.width,
+        ));
+      }
+
+      // 점 사이를 연결하는 영역 추가
+      for (int i = 0; i < stroke.points.length - 1; i++) {
+        final p1 = stroke.points[i];
+        final p2 = stroke.points[i + 1];
+        final halfWidth = stroke.strokeWidth * size.width / 2;
+
+        final dx = p2.dx - p1.dx;
+        final dy = p2.dy - p1.dy;
+        final length = math.sqrt(dx * dx + dy * dy) * size.width;
+
+        if (length > 0) {
+          final nx = -dy / (length / size.width) * halfWidth / size.width;
+          final ny = dx / (length / size.width) * halfWidth / size.width;
+
+          path.addPolygon([
+            Offset((p1.dx + nx) * size.width, (p1.dy + ny) * size.height),
+            Offset((p1.dx - nx) * size.width, (p1.dy - ny) * size.height),
+            Offset((p2.dx - nx) * size.width, (p2.dy - ny) * size.height),
+            Offset((p2.dx + nx) * size.width, (p2.dy + ny) * size.height),
+          ], true);
+        }
+      }
+    }
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant _PenStrokeClipper oldClipper) {
+    return oldClipper.strokes != strokes;
   }
 }

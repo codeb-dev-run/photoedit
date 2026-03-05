@@ -6,6 +6,33 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 /// 블러 모양 타입
 enum BlurShape { circle, rectangle }
 
+/// 블러 모드 타입
+enum BlurMode {
+  shape,  // 원형/사각형 스티커 블러
+  pen,    // 펜으로 그리는 블러
+}
+
+/// 펜 스트로크 (하나의 그리기 경로)
+class PenStroke {
+  final List<Offset> points;  // 정규화된 좌표 (0~1)
+  final double strokeWidth;   // 펜 굵기 (정규화)
+
+  const PenStroke({
+    required this.points,
+    this.strokeWidth = 0.05,
+  });
+
+  PenStroke copyWith({
+    List<Offset>? points,
+    double? strokeWidth,
+  }) {
+    return PenStroke(
+      points: points ?? this.points,
+      strokeWidth: strokeWidth ?? this.strokeWidth,
+    );
+  }
+}
+
 /// 블러 영역 모델 (스티커/모자이크 개념)
 class BlurRegion {
   final Offset position; // 중심 위치 (비율 0~1)
@@ -13,6 +40,9 @@ class BlurRegion {
   final BlurShape shape; // 모양
   final Color color; // 블러 색상 틴트
   final double opacity; // 투명도
+  final BlurMode mode; // 블러 모드
+  final List<PenStroke> penStrokes; // 펜 그리기 경로들
+  final double penWidth; // 현재 펜 굵기 (0.01~0.2)
 
   const BlurRegion({
     this.position = const Offset(0.5, 0.5),
@@ -20,6 +50,9 @@ class BlurRegion {
     this.shape = BlurShape.circle,
     this.color = const Color(0x00000000), // 투명 (무색)
     this.opacity = 1.0,
+    this.mode = BlurMode.shape,
+    this.penStrokes = const [],
+    this.penWidth = 0.05,
   });
 
   BlurRegion copyWith({
@@ -28,6 +61,9 @@ class BlurRegion {
     BlurShape? shape,
     Color? color,
     double? opacity,
+    BlurMode? mode,
+    List<PenStroke>? penStrokes,
+    double? penWidth,
   }) {
     return BlurRegion(
       position: position ?? this.position,
@@ -35,6 +71,9 @@ class BlurRegion {
       shape: shape ?? this.shape,
       color: color ?? this.color,
       opacity: opacity ?? this.opacity,
+      mode: mode ?? this.mode,
+      penStrokes: penStrokes ?? this.penStrokes,
+      penWidth: penWidth ?? this.penWidth,
     );
   }
 
@@ -239,6 +278,71 @@ class EditorStateNotifier extends StateNotifier<EditorState> {
     state = state.copyWith(
       blurRegion: state.blurRegion.copyWith(opacity: opacity.clamp(0.0, 1.0)),
       isBlurEnabled: true,
+    );
+  }
+
+  /// 블러 모드 설정 (스티커/펜)
+  void setBlurMode(BlurMode mode) {
+    state = state.copyWith(
+      blurRegion: state.blurRegion.copyWith(mode: mode),
+      isBlurEnabled: true,
+    );
+  }
+
+  /// 펜 굵기 설정
+  void setPenWidth(double width) {
+    state = state.copyWith(
+      blurRegion: state.blurRegion.copyWith(penWidth: width.clamp(0.01, 0.2)),
+      isBlurEnabled: true,
+    );
+  }
+
+  /// 펜 그리기 시작
+  void startPenStroke(Offset normalizedPoint) {
+    final newStroke = PenStroke(
+      points: [normalizedPoint],
+      strokeWidth: state.blurRegion.penWidth,
+    );
+    state = state.copyWith(
+      blurRegion: state.blurRegion.copyWith(
+        penStrokes: [...state.blurRegion.penStrokes, newStroke],
+      ),
+      isBlurEnabled: true,
+    );
+  }
+
+  /// 펜 그리기 진행 (드래그)
+  void addPenPoint(Offset normalizedPoint) {
+    if (state.blurRegion.penStrokes.isEmpty) return;
+
+    final strokes = List<PenStroke>.from(state.blurRegion.penStrokes);
+    final lastStroke = strokes.removeLast();
+    final updatedStroke = lastStroke.copyWith(
+      points: [...lastStroke.points, normalizedPoint],
+    );
+    strokes.add(updatedStroke);
+
+    state = state.copyWith(
+      blurRegion: state.blurRegion.copyWith(penStrokes: strokes),
+    );
+  }
+
+  /// 펜 그리기 취소 (마지막 스트로크 삭제)
+  void undoPenStroke() {
+    if (state.blurRegion.penStrokes.isEmpty) return;
+
+    final strokes = List<PenStroke>.from(state.blurRegion.penStrokes);
+    strokes.removeLast();
+
+    state = state.copyWith(
+      blurRegion: state.blurRegion.copyWith(penStrokes: strokes),
+    );
+  }
+
+  /// 펜 그리기 전체 삭제
+  void clearPenStrokes() {
+    state = state.copyWith(
+      blurRegion: state.blurRegion.copyWith(penStrokes: []),
     );
   }
 
