@@ -1,7 +1,7 @@
 name: photoedit
 description: "레트로 필름 사진 편집 앱 - 블러, 필름 필터, 그레인, 리사이즈"
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.1.0+2
 
 environment:
   sdk: ^3.10.1
